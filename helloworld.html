@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src= "angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+名: <input type="text" name="firstName" ng-model="firstName" required><span ng-show="firstName.$error.required">用户名是必须的。</span><br>
+姓: <input type="text" ng-model="lastName" required><br>
+<br>
+姓名: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
