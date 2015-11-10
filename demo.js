@@ -1,5 +1,5 @@
     var app = angular.module('myApp',[]);
-
+	//给应用程序中添加一个service组件
     app.service('serviceServices',function($http){
        var services={};
         services.request=function(){
@@ -8,8 +8,8 @@
         };
        return services;
     })
-
-
+	
+	//注入service组件
     app.controller('firstController',['$scope','serviceServices',function($scope,serviceServices){
         
         $scope.data='';

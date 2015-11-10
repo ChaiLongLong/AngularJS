@@ -17,22 +17,26 @@ table tr:nth-child(even) {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>AngularJS</title>
+	 <!--加载AngularJs文本库-->
     <script src="angular.min.js"></script>
 
 </head>
-
+ <!--ng-app="myApp" 定义一个 AngularJS 应用程序-->
+ <!--ng-controller 指令定义了应用程序控制器,控制应用程序数据-->
 <body ng-app="myApp">
 	<div ng-controller="firstController">
 	<table>
+	<!--数据以title排序-->
 		<tr ng-repeat="item in data | orderBy:'title'">
 			<td>{{ $index + 1 }}</td>
+			<!--元素的username属性大写-->
 			<td>{{ item.username | uppercase }}</td>
 			<td>{{ item.title }}</td>
 		</tr>
 	</table>
 </div>
 <br>
-
+<!--加载script脚本-->
 <script src="demo.js"></script>
 
 </body>

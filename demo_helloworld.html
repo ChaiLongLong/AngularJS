@@ -4,10 +4,11 @@
 <body>
 
 <div ng-app="myApp" ng-controller="myCtrl">
-
-名: <input type="text" name="firstName" ng-model="firstName" required><span ng-show="firstName.$error.required">用户名是必须的。</span><br>
-姓: <input type="text" ng-model="lastName" required><br>
+<!--ng-model 指令把元素值（比如输入域的值）绑定到应用程序-->
+名: <input type="text" ng-model="firstName" >
+姓: <input type="text" ng-model="lastName" ><br>
 <br>
+<!--使用表达式把应用程序数据绑定到 HTML 视图-->
 姓名: {{firstName + " " + lastName}}
 
 </div>
@@ -15,6 +16,7 @@
 <script>
 
 </script>
+<!--加载script脚本-->
 <script src="script.js"></script>
 </body>
 </html>
